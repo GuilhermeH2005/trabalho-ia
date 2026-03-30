@@ -8,7 +8,7 @@
 
 Este projeto tem como objetivo demonstrar a evolução do Processamento de Linguagem Natural (NLP), desde sistemas simbólicos baseados em regras até modelos estatísticos e vetoriais, chegando aos modelos modernos baseados em Deep Learning.
 
-O trabalho foi dividido em etapas que representam diferentes momentos históricos da IA, conforme proposto na atividade.
+O trabalho foi dividido em etapas que representam diferentes momentos históricos da IA.
 
 ---
 
@@ -21,10 +21,17 @@ O trabalho foi dividido em etapas que representam diferentes momentos histórico
 #### 🔧 Funcionamento
 
 * Implementação inspirada no ELIZA (1966)
-* Uso de **Expressões Regulares (Regex)**
+* Uso de Expressões Regulares (Regex)
 * Identificação de palavras-chave
 * Respostas baseadas em padrões pré-definidos
 * Simulação de diálogo simples
+
+#### 📊 Exemplo de Execução
+
+```
+Usuário: estou triste
+Bot: Por que você está triste?
+```
 
 #### 📊 Resultados
 
@@ -45,12 +52,19 @@ O trabalho foi dividido em etapas que representam diferentes momentos histórico
 
 #### 🔧 Funcionamento
 
-* Modelo baseado em **bigramas (N=2)**
+* Modelo baseado em bigramas (N=2)
 * Predição da próxima palavra com base na anterior
 * Uso de frequência e probabilidade
 * Geração automática de frases a partir de um corpus
 
 > Segue o princípio das Cadeias de Markov, onde o próximo estado depende apenas do estado atual.
+
+#### 📊 Exemplo de Execução
+
+```
+Entrada: "o gato"
+Saída: "o gato come peixe"
+```
 
 #### 📊 Resultados
 
@@ -71,10 +85,17 @@ O trabalho foi dividido em etapas que representam diferentes momentos histórico
 
 #### 🔧 Funcionamento
 
-* Uso da biblioteca **gensim**
+* Uso da biblioteca gensim
 * Representação de palavras como vetores numéricos
 * Cálculo de similaridade semântica
 * Operações vetoriais (ex: `gato - leite + carne`)
+
+#### 📊 Exemplo de Execução
+
+```
+Palavra: cachorro
+Mais similares: gato, animal, pet
+```
 
 #### 📊 Resultados
 
@@ -94,14 +115,22 @@ O trabalho foi dividido em etapas que representam diferentes momentos histórico
 
 #### 🔧 Funcionamento
 
-* Uso da biblioteca **transformers**
+* Uso da biblioteca transformers
 * Modelo pré-treinado (GPT-2 em português)
 * Geração de texto baseada em entrada do usuário
-* Utilização do mecanismo de **atenção (attention)**
+* Utilização do mecanismo de atenção (attention)
 
 #### 🧠 Conceito de Atenção
 
-O mecanismo de atenção permite que o modelo analise toda a frase ao mesmo tempo, identificando quais palavras são mais importantes para o contexto.
+Diferente dos modelos anteriores, os Transformers analisam toda a frase simultaneamente.
+O mecanismo de atenção permite identificar quais palavras são mais importantes para o contexto, melhorando a coerência das respostas.
+
+#### 📊 Exemplo de Execução
+
+```
+Entrada: "A inteligência artificial"
+Saída: "A inteligência artificial está cada vez mais presente no nosso cotidiano..."
+```
 
 #### 📊 Resultados
 
@@ -121,8 +150,8 @@ O mecanismo de atenção permite que o modelo analise toda a frase ao mesmo temp
 ## 🛠️ Tecnologias Utilizadas
 
 * Python
-* Biblioteca **gensim** (Word2Vec)
-* Biblioteca **transformers** (Deep Learning)
+* gensim (Word2Vec)
+* transformers (Deep Learning)
 * Expressões Regulares (Regex)
 * Google Colab / Jupyter Notebook
 
@@ -130,18 +159,34 @@ O mecanismo de atenção permite que o modelo analise toda a frase ao mesmo temp
 
 ## ▶️ Como Executar
 
-1. Instale as dependências:
+### 1. Instale as dependências:
 
 ```bash
-pip install gensim transformers torch
+pip install gensim transformers torch regex
 ```
 
-2. Execute os arquivos:
+### 2. Execute os arquivos:
 
-* `eliza.py`
-* `ngrams.py`
-* `word2vec.py`
-* `transformers.py`
+```
+python eliza.py
+python ngrams.py
+python word2vec.py
+python transformers.py
+```
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+trabalho-ia/
+│
+├── eliza.py
+├── ngrams.py
+├── word2vec.py
+├── transformers.py
+├── README.md
+```
 
 ---
 
@@ -149,10 +194,9 @@ pip install gensim transformers torch
 
 Este trabalho demonstra a evolução das técnicas de NLP ao longo do tempo:
 
-* **ELIZA** → abordagem simbólica baseada em regras
-* **N-grams** → abordagem estatística baseada em probabilidade
-* **Word2Vec** → representação vetorial e semântica
-* **Transformers** → modelos modernos baseados em Deep Learning e atenção
+* ELIZA → abordagem simbólica baseada em regras
+* N-grams → abordagem estatística baseada em probabilidade
+* Word2Vec → representação vetorial e semântica
+* Transformers → modelos modernos baseados em Deep Learning e atenção
 
 Cada abordagem apresenta vantagens e limitações, mostrando como a Inteligência Artificial evoluiu para modelos cada vez mais sofisticados e capazes de compreender linguagem natural.
-
